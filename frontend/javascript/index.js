@@ -3,4 +3,9 @@ function moveBg(e) {
     e.target.style.setProperty('--x', ((e.clientX - rect.x) / rect.width) * 100);
     e.target.style.setProperty('--y', ((e.clientY - rect.y) / rect.height) * 100);
 }
-document.querySelector('button').addEventListener('pointermove', moveBg);
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('pointermove', moveBg);
+    });
+});
