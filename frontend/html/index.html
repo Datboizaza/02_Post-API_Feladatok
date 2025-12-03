@@ -15,10 +15,33 @@
         <script src="../javascript/index.js"></script>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row text-center">
-                <h1 class="display-1">A szerver fut.</h1>
+        <main id="app" class="dark">
+            <div class="container-fluid">
+                <div class="row text-center">
+                    <div class="col-sm-12 bubble">
+                        <p id="title">Üdvözöllek a focás akasztófa játékban!</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-sm-6">
+                        <button type="button">Irány a játék!</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button">Szerkesztem a szavakat!</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </main>
+        <svg width="0" height="0" style="position: absolute">
+            <filter id="goo" x="-50%" y="-50%" width="200%" height="200%">
+                <feComponentTransfer>
+                    <feFuncA type="discrete" tableValues="0 1"></feFuncA>
+                </feComponentTransfer>
+                <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+                <feComponentTransfer>
+                    <feFuncA type="table" tableValues="-5 11"></feFuncA>
+                </feComponentTransfer>
+            </filter>
+        </svg>
     </body>
 </html>
